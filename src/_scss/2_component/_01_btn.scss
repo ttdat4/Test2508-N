@@ -1,0 +1,152 @@
+/*------------------------------------------------------------
+btn
+------------------------------------------------------------*/
+.c-btn {
+    max-width: 450px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #00ada0;
+    height: 60px;
+    padding-top: 9px;
+    box-shadow: 4px 4px #000;
+    @include sp {
+        max-width: 269px;
+        height: 38px;
+        padding: 12px 0;
+        box-shadow: 2px 2px #000;
+    }
+
+    &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+        // box-shadow: 6px 6px #000;
+        transform: translateY(3px);
+        box-shadow: none;
+    }
+    // &:hover {
+    //     opacity: 0.7;
+    //     cursor: pointer;
+    //     box-shadow: -4px -4px #00ada0;
+    //     background-color: #000;
+    // }
+
+    a {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #fff;
+        line-height: 2.5;
+        @include sp {
+            font-size: 1.3rem;
+            line-height: 1;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 19px;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+            background-image: url("assets/img/icon_arrow.png");
+            background-size: cover;
+            z-index: 213;
+            @include sp {
+                width: 15px;
+                height: 15px;
+                right: 30px;
+                top: 12px;
+            }
+        }
+    }
+
+    &link {
+        position: absolute;
+        bottom: 43px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        box-shadow: none;
+        font-feature-settings: "palt" 1;
+        @include bp(1200) {
+            max-width: 300px;
+        }
+        @include tab {
+            max-width: 200px;
+            height: 35px;
+            padding-top: 1px;
+        }
+        @include sp {
+            position: relative;
+            order: 3;
+            bottom: unset;
+            margin-top: 24px;
+            left: unset;
+            transform: unset;
+            display: inline-block;
+        }
+
+        a {
+            color: #00ada0;
+            @include tab {
+                font-size: 1.3rem;
+            }
+
+            &::after {
+                top: 20px;
+                background-image: url("assets/img/icon_arrow2.png");
+                @include tab {
+                    top: 8px;
+                    right: 10px;
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+
+    &linkmb {
+        display: none;
+        @include sp {
+            display: block;
+            margin-top: 24px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: none;
+
+        }
+
+        a {
+            color: #00ada0;
+
+            &::after {
+                background-image: url("assets/img/icon_arrow2.png");
+            }
+        }
+    }
+
+    &news {
+        bottom: -51px;
+    }
+}
+
+.c-backtotop {
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+
+    img {
+        width: 30px;
+        margin: 0 auto;
+    }
+
+    &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+        transform: translateY(-5px);
+    }
+}
+/*
+------------------------------------------------------------*/
+
